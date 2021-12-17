@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 5</title>
+</head>
+<style>
+    * {
+        margin:0;
+        padding:0;
+    }
+    body {
+        position: relative;
+        background-color: darkslategrey ;
+        width:100%;
+        height:100vh;
+        font-family: sans-serif;
+    }
+    .container {
+        position:absolute;
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all;
+        transition-duration: 1s; 
+       
+    }
+    .text {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        z-index: -1;
+        border: 50px solid transparent;
+        border-image: url(animations/images/candycane.png) 40% round;
+        width:50%;
+        color: white;
+        font-weight: bold;
+        font-family: fantasy;
+}
+    .photo {
+        position: absolute;
+        width: 100%;
+        height:100%;
+        background-color:transparent;
+        transition: all;
+        transition-duration: 1s;
+        background-image: url(animations/images/red.png);
+        z-index: 1;
+
+}
+    .container:hover> .photo {
+        transform: translate(200%) rotate(360deg);
+        opacity: 0;
+        transition-duration: 1s;
+}
+
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="photo"></div>
+        <div class="text">  Merry Christmas! 8D</div>
+       <div class="border-top-bottom"></div>
+       <div class="border-sides"></div>
+    </div>
+    
+</body>
+</html>
